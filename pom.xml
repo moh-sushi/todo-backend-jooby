@@ -39,6 +39,25 @@
       <artifactId>jooby-jackson</artifactId>
     </dependency>
 
+    <!-- DataSource via HikariCP-->
+    <dependency>
+      <groupId>io.jooby</groupId>
+      <artifactId>jooby-hikari</artifactId>
+    </dependency>
+
+    <!-- Hibernate Module-->
+    <dependency>
+      <groupId>io.jooby</groupId>
+      <artifactId>jooby-hibernate</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>com.h2database</groupId>
+      <artifactId>h2</artifactId>
+      <version>1.4.200</version>
+      <scope>runtime</scope>
+    </dependency>
+
     <!-- Tests -->
     <dependency>
       <groupId>org.junit.jupiter</groupId>

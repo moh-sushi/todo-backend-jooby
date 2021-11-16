@@ -1,8 +1,6 @@
 package com.todobackend.mohsushi;
 
-import io.jooby.Context;
-import io.jooby.Jooby;
-
+@Deprecated
 public class TodoBackendRoutes {
 
   private final TodoBackendRepository repository;

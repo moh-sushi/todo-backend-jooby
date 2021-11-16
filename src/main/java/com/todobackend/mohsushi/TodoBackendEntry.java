@@ -1,12 +1,20 @@
 package com.todobackend.mohsushi;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import java.util.Objects;
 
+@Entity
 public class TodoBackendEntry {
 
+  @Id
+  @GeneratedValue
   private Long id;
   private String url;
   private String title;
+  @Column (name = "\"order\"")
   private Long order;
   private Boolean completed = Boolean.FALSE;
 
