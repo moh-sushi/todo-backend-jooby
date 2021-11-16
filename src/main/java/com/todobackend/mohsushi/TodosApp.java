@@ -9,10 +9,8 @@ import org.hibernate.Session;
 
 import java.util.List;
 
-public class TodoBackendApp extends Jooby {
+public class TodosApp extends Jooby {
   {
-    install(new JacksonModule());
-
     install(new HikariModule());
     install(new HibernateModule());
     decorator(new TransactionalRequest());
@@ -20,7 +18,6 @@ public class TodoBackendApp extends Jooby {
     final Cors cors = new Cors().setMethods(List.of(GET, POST, DELETE, PATCH));
     decorator(new CorsHandler(cors));
 
-    setContextPath("/todos");
     get("/", ctx -> {
       ctx.setResponseType(MediaType.json);
       final TodoBackendRepository repository = new TodoBackendRepositoryHibernateImpl(require(Session.class));
@@ -65,10 +62,6 @@ public class TodoBackendApp extends Jooby {
         return repository.update(Long.parseLong(ctx.path("id").value()), entryPatch);
       }
     });
-  }
-
-  public static void main(final String[] args) {
-    runApp(args, TodoBackendApp::new);
   }
 
 }

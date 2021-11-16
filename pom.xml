@@ -13,7 +13,7 @@
 
   <properties>
     <!-- Startup class -->
-    <application.class>com.todobackend.mohsushi.TodoBackendApp</application.class>
+    <application.class>com.todobackend.mohsushi.App</application.class>
 
     <jooby.version>2.11.0</jooby.version>
 
@@ -49,6 +49,11 @@
     <dependency>
       <groupId>io.jooby</groupId>
       <artifactId>jooby-hibernate</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>io.jooby</groupId>
+      <artifactId>jooby-freemarker</artifactId>
     </dependency>
 
     <dependency>
@@ -89,6 +94,10 @@
     <resources>
       <resource>
         <directory>conf</directory>
+      </resource>
+      <resource>
+        <directory>conf-filtered</directory>
+        <filtering>true</filtering>
       </resource>
     </resources>
     <plugins>
