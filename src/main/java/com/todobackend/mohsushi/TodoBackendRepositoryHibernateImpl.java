@@ -25,8 +25,6 @@ public class TodoBackendRepositoryHibernateImpl implements TodoBackendRepository
     CriteriaQuery<TodoBackendEntry> all = cq.select(rootEntry);
 
     TypedQuery<TodoBackendEntry> allQuery = session.createQuery(all);
-    boolean x = true;
-//    if (x) throw new RuntimeException("expected ;-)"); // only for tests exception handling
     return allQuery.getResultList();
   }
 
@@ -39,6 +37,8 @@ public class TodoBackendRepositoryHibernateImpl implements TodoBackendRepository
   public TodoBackendEntry create(TodoBackendEntry entry, String url) {
     entry.setUrl(url);
     session.save(entry);
+    boolean x = true;
+//    if (x) throw new RuntimeException("expected ;-)"); // only for tests exception handling
     return entry;
   }
 
