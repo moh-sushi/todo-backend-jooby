@@ -13,4 +13,4 @@ COPY conf conf
 COPY views views
 EXPOSE 8080
 EXPOSE 5000
-CMD ["java", "-agentlib:jdwp=transport=dt_socket,address=*:5000,suspend=y,server=y", "-jar", "app.jar"]
+CMD ["java", "-agentlib:jdwp=transport=dt_socket,address=*:5000,suspend=n,server=y", "-jar", "app.jar"]
