@@ -9,6 +9,8 @@ public class App extends Jooby {
 
     install("/todos", () -> new TodosApp());
     install("/version",() -> new VersionApp());
+
+    get("/", ctx -> "Welcome to Jooby! :-)");
   }
 
   public static void main(final String[] args) {
