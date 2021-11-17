@@ -13,4 +13,4 @@ COPY conf conf
 COPY views views
 EXPOSE 8080
 EXPOSE 5000
-CMD ["java", "-jar", "app.jar"]
+CMD ["java", "-Dserver.port=$PORT", "-jar", "app.jar"]
