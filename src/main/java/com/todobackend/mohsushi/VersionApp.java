@@ -6,8 +6,6 @@ import io.jooby.ModelAndView;
 import io.jooby.freemarker.FreemarkerModule;
 
 import java.io.BufferedInputStream;
-import java.io.File;
-import java.io.FileInputStream;
 import java.nio.charset.StandardCharsets;
 import java.util.List;
 import java.util.Map;
@@ -18,7 +16,7 @@ public class VersionApp extends Jooby {
 
     get("/", ctx -> {
       final String version;
-      try (BufferedInputStream bis = new BufferedInputStream(new FileInputStream(new File(VersionApp.class.getResource("/version.txt").toURI())))) {
+      try (BufferedInputStream bis = new BufferedInputStream(VersionApp.class.getResourceAsStream("/com/todobackend/mohsushi/version.txt"))) {
         version = new String(bis.readAllBytes(), StandardCharsets.UTF_8);
       }
       final MediaType mediaType = ctx.accept(List.of(MediaType.json, MediaType.xml, MediaType.html));

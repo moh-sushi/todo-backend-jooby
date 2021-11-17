@@ -96,7 +96,7 @@
         <directory>conf</directory>
       </resource>
       <resource>
-        <directory>conf-filtered</directory>
+        <directory>src/main/resources-filtered</directory>
         <filtering>true</filtering>
       </resource>
     </resources>
