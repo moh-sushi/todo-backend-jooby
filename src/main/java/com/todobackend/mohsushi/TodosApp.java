@@ -34,7 +34,7 @@ public class TodosApp extends Jooby {
       ctx.setResponseType(MediaType.json);
       TodoBackendEntry entry = ctx.body(TodoBackendEntry.class);
       final TodoBackendRepository repository = new TodoBackendRepositoryHibernateImpl(require(Session.class));
-      return repository.create(entry, ctx.getRequestURL());
+      return repository.create(entry, ctx.getRequestURL().replace("http://", "https://"));
     });
 
     get("/{id:[0-9]+}", ctx -> {
