@@ -11,6 +11,6 @@ WORKDIR /todo-backend-jooby
 COPY --from=build /todo-backend-jooby/target/todo-backend-jooby-*.jar app.jar
 COPY conf conf
 COPY views views
-EXPOSE 8080
+EXPOSE ${PORT:-8080}
 EXPOSE 5000
 CMD java -Dserver.port=${PORT:-8080} -jar app.jar
