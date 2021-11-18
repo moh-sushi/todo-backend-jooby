@@ -1,4 +1,4 @@
-# tobo-backend-jooby
+# todo-backend-jooby
 
 This project is an implementation of [Todo-Backend](https://www.todobackend.com/) using [Jooby](https://jooby.io/), [Hibernate](https://hibernate.org/) and [H2-Database](https://www.h2database.com/).
 
@@ -12,8 +12,8 @@ This project is an implementation of [Todo-Backend](https://www.todobackend.com/
 
 ## docker
 
-     docker build . -t tobo-backend-jooby
-     docker run -p 8080:8080 -it tobo-backend-jooby
+     docker build . -t todo-backend-jooby
+     docker run -p 8080:8080 -it todo-backend-jooby
 
 
 ## License
