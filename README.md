@@ -19,7 +19,7 @@ This project is an implementation of [Todo-Backend](https://www.todobackend.com/
 
 :information_source: both deployment variants contain the same application code
 
-### deployment jar file
+### jar file deployment
 
 * deploy link : https://todo-backend-jooby-v2.herokuapp.com/todos
 * link for automatic testing todo-backend : https://www.todobackend.com/specs/index.html?https://todo-backend-jooby-v2.herokuapp.com/todos
